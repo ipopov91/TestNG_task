@@ -71,4 +71,17 @@ public class TestTriangle {
         Triangle triangle2 = new Triangle(5.5, 6.5, 7.5);
         assertEquals(triangle2.getSquare(), 17.407231794573196);
     }
+    // Overflow check
+    @DataProvider
+    public static Object[][] dataMaxValue() {
+        return new Object[][]{
+                {Double.MAX_VALUE, 1.0, 5.0},
+                {20.0, Double.MAX_VALUE, 3.55},
+                {1000.5, 50.15, Double.MAX_VALUE}
+        };
+    }
+    @Test(dataProvider = "dataMaxValue")
+    public void testMaxLength(double a, double b, double c) {
+        assertEquals(a * b * c, Double.POSITIVE_INFINITY);
+    }
 }

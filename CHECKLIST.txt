@@ -1,0 +1,10 @@
+1. Check sides more then zero
+2. Check if the triangle type is equilateral
+3. Check if the triangle type is isosceles
+4. Check if the triangle type is ordinary
+5. Check if the triangle type is rectangular
+6. Check two sides are larger than the third
+7. Check type of input parameters
+8. Check triangle square for int values
+9. Check triangle square for double values
+10. Overflow check
